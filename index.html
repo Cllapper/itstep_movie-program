@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пошук фільмів</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Пошук фільмів</h1>
+    </header>
+
+    <main>
+        <div id="search-container">
+            <form id="search-form">
+                <div class="form-group">
+                    <label for="title-input">Title:</label>
+                    <input type="text" id="title-input" required>
+                </div>
+                <div class="form-group">
+                    <label for="type-select">Type:</label>
+                    <select id="type-select">
+                        <option value="movie">Movie</option>
+                        <option value="series">Series</option>
+                        <option value="episode">Episode</option>
+                    </select>
+                </div>
+                <button type="submit">Search</button>
+            </form>
+        </div>
+
+        <div id="results-container"></div>
+        <div id="pagination-container"></div>
+        <div id="details-container"></div>
+    </main>
+
+    <script src="main.js"></script>
+</body>
+</html>
