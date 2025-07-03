@@ -3,23 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Пошук фільмів</title>
+    <title>Вдосконалений пошук фільмів</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <h1>Пошук фільмів</h1>
-    </header>
-
     <main>
-        <div id="search-container">
+        <div id="search-wrapper">
+            <h2>Search:</h2>
             <form id="search-form">
-                <div class="form-group">
+                <div class="form-row">
                     <label for="title-input">Title:</label>
                     <input type="text" id="title-input" required>
                 </div>
-                <div class="form-group">
+                <div class="form-row">
                     <label for="type-select">Type:</label>
                     <select id="type-select">
                         <option value="movie">Movie</option>
@@ -31,9 +28,20 @@
             </form>
         </div>
 
-        <div id="results-container"></div>
-        <div id="pagination-container"></div>
-        <div id="details-container"></div>
+        <div id="results-wrapper">
+            <h2 id="films-header" class="hidden">Films:</h2>
+            <div id="results-container"></div>
+            <div id="loader" class="loader hidden"></div>
+            <div id="more-container"></div>
+        </div>
+
+        <div id="modal" class="modal-overlay hidden">
+            <div class="modal-content">
+                <span class="close-btn">×</span>
+                <div id="modal-body"></div>
+            </div>
+        </div>
+
     </main>
 
     <script src="main.js"></script>
